@@ -1,0 +1,38 @@
+<div class="toolbar" role="banner">
+    <img alt="Medical Logo" src="https://icons.iconarchive.com/icons/martz90/circle-addon2/512/health-icon.png" width="50" height="50">
+    <h1 class="title">Chart for Patient: {{patient.name}}</h1>
+</div>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Race</th>
+        <th>Marital Status</th>
+        <th>Language</th>
+        <th>Poverty</th>
+    </tr>
+  
+    <tr>
+        <td>{{patient.id}}</td>
+        <td>{{patient.name}}</td>
+        <td>{{patient.gender}}</td>
+        <td>{{patient.race}}</td>
+        <td>{{patient.maritalStatus}}</td>
+        <td>{{patient.language}}</td>
+        <td>{{patient.poverty}}</td>
+    </tr>
+  </table>
+
+<div class="grid">
+
+    <div id="formatted" class="item large"><b>Ultrasounds:</b><br/>{{patient.ultrasounds}}</div>
+    <div id="formatted" class="item large"><b>Chest x-Rays:</b><br/>{{patient.chestxray}}</div>
+    <div id="formatted" class="item large"><b>CT Scans:</b><br/>{{patient.ctScans}}</div>
+    <div id="formatted" class="item large"><b>MRIs:</b><br/>{{patient.mris}}</div>
+  
+    <div id="formatted" class="item bottom"><b>Notes:</b><br/>{{patient.notes}}</div>
+  </div>
+
+

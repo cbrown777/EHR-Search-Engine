@@ -1,0 +1,6 @@
+{
+    "/api": {
+    "target": "http://18.118.170.215:8000/docs",
+    "secure": false
+    }
+}

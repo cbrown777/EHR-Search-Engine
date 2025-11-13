@@ -1,0 +1,44 @@
+<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+
+<div class="toolbar" role="banner">
+  <img alt="Medical Logo" src="https://icons.iconarchive.com/icons/martz90/circle-addon2/512/health-icon.png" width="50" height="50">
+  <h1 class="title">Patient Search</h1>
+</div>
+<div class="table-container">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Race</th>
+    </tr>
+
+    <tr *ngFor="let patient of patients" (click)="viewPatientDetails(patient)">
+      <td>{{patient.id}}</td>
+      <td>{{patient.name}}</td>
+      <td>{{patient.gender}}</td>
+      <td>{{patient.race}}</td>
+    </tr>
+    <tr *ngFor="let n of numSequence(10 - patients.length)">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+
+<p></p>
+
+<br>
+
+<!--
+<div class="searchbar">
+  <input type='search' placeholder="search" [(ngModel)]="search"> <button (click)="searchUsers()">Search</button>
+</div>
+-->
+
+<form class="example" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search..." [(ngModel)]="search" name="search2">
+  <button (click)="searchUsers()"><i class="fa fa-search"></i></button>
+</form>
